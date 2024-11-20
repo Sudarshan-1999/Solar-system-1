@@ -7,10 +7,21 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Action
-          uses: actions/checkout@v4   
-        - name: Welcome message
-          run: echo "My First Github Action Run"
-        - name: List files
-          run: ls
-        - name: Read File
-          run: cat README.md
+          uses: actions/checkout@v4 
+
+        - name: List and Read file
+          run: |
+            echo "My First Github Action Run"
+            ls 
+            cat README.md
+        
+        - name: Generate ASCII
+          run: cowsay -f Tiger "Run for cover... I am a Tiger" >> tiger.txt
+        
+
+
+        
+        # - name: List files
+        #   run: ls
+        # - name: Read File
+        #   run: cat README.md
