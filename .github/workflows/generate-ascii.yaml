@@ -1,0 +1,26 @@
+name: Generate ASCII 
+on: push
+
+jobs:
+    
+    ascii-job:
+      runs-on: ubuntu-latest
+      steps:
+      - name: checkout 
+        uses: actions/checkout@v4
+
+      - name: Install cowsay
+        run: |
+          sudo apt update -y
+          sudo apt install cowsay -y
+      - name: Generate ASCII
+        run: cowsay -f Tiger "Run for cover... I am a Tiger" >> tiger.txt
+      
+      - name: Test file exists
+        run: grep -i "tiger" tiger.txt
+      
+      - name: read text file
+        run: cat tiger.txt
+
+      - name:
+        run: ls -ltrah

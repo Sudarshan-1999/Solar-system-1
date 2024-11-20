@@ -14,13 +14,8 @@ jobs:
             echo "My First Github Action Run"
             ls 
             cat README.md
-        
-        - name: Generate ASCII
-          run: cowsay -f Tiger "Run for cover... I am a Tiger" >> tiger.txt
-        
+      
 
-
-        
         # - name: List files
         #   run: ls
         # - name: Read File
